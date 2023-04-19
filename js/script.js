@@ -1,4 +1,3 @@
-
 /*=========== MIXITUP FILTER PORTFOLIO ==============*/
 
 let mixerPortfolio = mixitup('.card-content', {
