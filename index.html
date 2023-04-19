@@ -1,0 +1,225 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design | Codehal</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" charset="utf-8"></script>
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- header design -->
+        
+        <nav class="navbar">
+            <a href="#portfolio"></a>
+        </nav>
+    </header>
+
+    <!-- portfolio section design -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <div class="work__filters">
+            <span class="work__item active-work"data-filter='all'>All</span>
+            <span class="work__item"data-filter='.science'>Science</span>
+            <span class="work__item"data-filter='.analysis'>Analysis</span>
+        </div>
+        <div class="portfolio-container">
+            <div class="card-content">
+                <div class="card mix science">
+                    <div class="card-info">
+                        <h3>Science</h3>
+                    </div>  
+                    <div class="card-image"><img src="images/1.jpg" alt=""></div>
+                    <div class="portfolio-layer">
+                        <p>description</p>
+                            
+                    </div>
+                    
+                </div>
+                <div class="card mix science">
+                    <div class="card-info">
+                        <h3>Science</h3>
+                    </div>
+                    <div class="card-image"><img src="images/2.jpg" alt=""></div>
+                    <div class="portfolio-layer">
+                        <p>description</p>
+                    </div>  
+                </div>
+                <div class="card mix science">
+                    <div class="card-info">
+                        <h3>Science</h3>
+                    </div>
+                    <div class="card-image"><img src="images/3.jpg" alt=""></div>
+                    <div class="portfolio-layer">
+                        <p>description</p>
+                        <div class="div">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mix science">
+                    <div class="card-info">
+                        <h3>Science</h3>
+                    </div>
+                    <div class="card-image"><img src="images/4.jpg" alt=""></div>
+                    <div class="portfolio-layer">
+                        <p>description</p>
+                        <div class="div">
+                            <a style="margin: 0 1rem 0 0";href="https://github.com/Pablonevadobusto/Heart-Failure" target="_blank"><i class='bx bx-link-external'></i></a>
+                            <a href="https://pablonevadobusto-heart-failure-heart-app-ann-rg7664.streamlit.app/"target="_blank"><i class='bx bx-window-alt'></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mix science">
+                    <div class="card-info">
+                        <h3>Science</h3>
+                    </div>
+                    <div class="card-image"><img src="images/5.jpg" alt=""></div>
+                    <div class="portfolio-layer">
+                        <p>description</p>
+                        <a href="https://github.com/Pablonevadobusto/LinearRegression" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="card mix analysis">
+                    <div class="card-info">
+                        <h3>Analysis</h3>
+                    </div>
+                    <div class="card-image"><img src="images/6.jpg" alt=""></div>
+                    <div class="portfolio-layer">
+                        <p>description</p>
+                        <a href="https://github.com/Pablonevadobusto/DataVisualisation" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="card mix analysis">
+                    <div class="card-info">
+                        <h3>Analysis</h3>
+                    </div>
+                    <div class="card-image"><img src="images/7.jpg" alt=""></div>
+                    <div class="portfolio-layer">
+                        <p>description</p>
+                        <a href="https://github.com/Pablonevadobusto/TextBasedAdventure" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="card mix analysis">
+                    <div class="card-info">
+                        <h3>Analysis</h3>
+                    </div>
+                    <div class="card-image"><img src="images/8.jpg" alt=""></div>
+                    <div class="portfolio-layer">
+                        <p>description</p>
+                        <a href="https://github.com/Pablonevadobusto/DiceRollingSimulator" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>       
+
+        
+            <div class="pagination">
+                <!-- <li class="page-item previous-page disable"><a class="page-link" href="#">Prev</a></li> 
+                <li class="page-item current-page prompt"><a class="page-link" href="#">1</a></li> 
+                <li class="page-item dots"><a class="page-link" href="#">...</a></li> 
+                <li class="page-item current-page"><a class="page-link" href="#">5</a></li> 
+                <li class="page-item current-page"><a class="page-link" href="#">6</a></li> 
+                <li class="page-item dots"><a class="page-link" href="#">...</a></li> 
+                <li class="page-item current-page"><a class="page-link" href="#">10</a></li>
+                <li class="page-item next-page"><a class="page-link" href="#">Next</a></li>  -->
+
+            </div>
+        </div>
+        <script type="text/javascript">
+        function getPageList(totalPages, page, maxLength){
+            function range(start, end){
+                return Array.from(Array(end - start + 1), (_, i) => i + start);
+            }
+
+            var sideWidth = maxLength < 9 ? 1 : 2;
+            var leftWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+            var rightWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+
+            if(totalPages <= maxLength){
+                return range(1, totalPages);
+            }
+
+            if(page <= maxLength - sideWidth - 1 -rightWidth){
+                return range(1, maxLength - sideWidth - 1).concat(0, range(totalPages - sideWidth + 1, totalPages));
+            }
+
+            if(page >= totalPages - sideWidth - 1 - rightWidth){
+                return range(1, sideWidth).concat(0, range(totalPages - sideWidth - 1 -rightWidth - leftWidth, totalPages));
+            }
+
+            return range(1, sideWidth).concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages));
+        }
+
+        $(function(){
+            var numberOfItems = $(".card-content .card").length;
+            var limitPerPage = 6; //How many card items visible per page
+            var totalPages = Math.ceil(numberOfItems / limitPerPage);
+            var paginationSize = 3; //How many page elements visible in the pagination
+            var currentPage;
+
+            function showPage(whichPage){
+                if(whichPage < 1 || whichPage > totalPages)return false;
+
+                currentPage = whichPage;
+
+                $(".card-content .card").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
+
+                $(".pagination li").slice(1, -1).remove();
+
+                getPageList(totalPages, currentPage, paginationSize).forEach(item => {
+                    $("<li>").addClass("page-item").addClass(item ? "current-page" : "dots")
+                    .toggleClass("prompt", item === currentPage).append($("<a>").addClass("page-link")
+                    .attr({href: "javascript:void(0)"}).text(item || "...")).insertBefore(".next-page");
+                });
+
+                $(".previous-page").toggleClass("disable", currentPage === 1);
+                $(".next-page").toggleClass("disable", currentPage === totalPages);
+                return true;
+            }
+
+            $(".pagination").append(
+                $("<li>").addClass("page-item").addClass("previous-page").append($("<a>").addClass("page-link").attr({href: "javascript:void(0)"}).text("Prev")),
+                $("<li>").addClass("page-item").addClass("next-page").append($("<a>").addClass("page-link").attr({href: "javascript:void(0)"}).text("Next"))
+            );
+
+            $(".card-content").show();
+            showPage(1);
+
+            $(document).on("click", ".pagination li.current-page:not(.prompt)", function(){
+                return showPage(+$(this).text());
+            });
+
+            $(".next-page").on("click", function(){
+                return showPage(currentPage + 1); 
+            });
+            
+            $(".previous-page").on("click", function(){
+                return showPage(currentPage - 1); 
+            });
+        });
+        </script>
+    </section>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- MIXITUP FILTER  -->
+
+    <script src="js/mixitup.min.js"></script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
